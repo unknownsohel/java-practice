@@ -13,7 +13,26 @@ public class ArrayLists {
         arr.add(a);
         arr.add(b);
         arr.add(c);
-        System.out.println(arr);
+        //System.out.println(arr);
+
+        for(int i=0;i<arr.size();i++){
+            for(int j=0;j<arr.get(i).size();j++){
+                System.out.print(arr.get(i).get(j) +" ");
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+
+        arr.add(new ArrayList<>());
+        arr.get(arr.size()-1).add(30);
+        arr.get(arr.size()-1).add(50);
+        for(ArrayList<Integer> list : arr){
+            for(Integer num : list){
+                System.out.print(num +" ");
+            }
+            System.out.println();
+        }
     }
     
 }
